@@ -18,6 +18,6 @@ public interface ProductRepository {
     long countProudct ();
     boolean addorUpdate(Product product);
 
-//    Product getProductById(int productId);
+    Product getProductById(int productId);
 
 }

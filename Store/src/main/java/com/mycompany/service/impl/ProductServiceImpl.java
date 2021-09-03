@@ -53,5 +53,10 @@ public class ProductServiceImpl implements ProductService {
        
        return false;
     }
+
+    @Override
+    public Product getProductById(int id) {
+        return this.productRepository.getProductById(id);
+    }
     
 }

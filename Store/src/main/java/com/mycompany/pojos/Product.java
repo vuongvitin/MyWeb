@@ -5,6 +5,7 @@
  */
 package com.mycompany.pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -53,6 +54,7 @@ public class Product implements Serializable {
     @ManyToOne
     @JoinColumn(name = "category_id")
     @NotNull
+    @JsonIgnore
     private Category category;
     @ManyToMany
     @JoinTable(
@@ -60,6 +62,7 @@ public class Product implements Serializable {
             joinColumns = {@JoinColumn(name = "product_id")},
             inverseJoinColumns = { @JoinColumn(name = "manufacturer")}
     )
+    @JsonIgnore
     private Set<Manufacturer> manufacturers;
     @Transient
     private MultipartFile file;

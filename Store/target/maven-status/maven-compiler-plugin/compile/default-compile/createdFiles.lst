@@ -8,6 +8,7 @@ com\mycompany\repository\CategoryRepository.class
 com\mycompany\configs\TilesConfig.class
 com\mycompany\service\UserService.class
 com\mycompany\service\impl\CategoryServiceImpl.class
+com\dht\utils\Utils.class
 com\mycompany\configs\WebApplicationContextConfig.class
 com\mycompany\configs\SecurityWebAppInitializer.class
 com\mycompany\pojos\Category.class
@@ -15,12 +16,14 @@ com\mycompany\controllers\HomeController.class
 com\mycompany\repository\impl\ProductRepositoryImpl.class
 com\mycompany\configs\HibernateConfig.class
 com\mycompany\configs\SpringSecurityConfig.class
+com\mycompany\pojos\Cart.class
 com\mycompany\controllers\ApiCartCoController.class
 com\mycompany\repository\impl\CategoryRepositoryImpl.class
 com\mycompany\repository\impl\UserRepositoryImpl.class
 com\mycompany\service\impl\ProductServiceImpl.class
 com\mycompany\repository\ProductRepository.class
 com\mycompany\service\impl\UserServiceImpl.class
+com\mycompany\controllers\CartController.class
 com\mycompany\formatter\CategoryFormatter.class
 com\mycompany\pojos\Manufacturer.class
 com\mycompany\pojos\Product.class

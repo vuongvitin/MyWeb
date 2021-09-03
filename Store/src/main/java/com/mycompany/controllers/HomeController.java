@@ -5,16 +5,15 @@
  */
 package com.mycompany.controllers;
 
-import com.mycompany.pojos.User;
+import com.dht.utils.Utils;
+import com.mycompany.pojos.Cart;
 import com.mycompany.service.CategoryService;
 import com.mycompany.service.ProductService;
-import java.util.ArrayList;
-import java.util.List;
-
-
 import java.util.Map;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.provisioning.UserDetailsManager;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +22,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -39,8 +38,9 @@ public class HomeController {
     private ProductService productService;
     
     @ModelAttribute
-    public void commonAttr(Model model){
+    public void commonAttr(Model model, HttpSession session){
         model.addAttribute("categories", this.categoryService.getCategories());
+         model.addAttribute("cartCounter", Utils.countCart((Map<Integer, Cart>) session.getAttribute("cart")));
     }
     
 

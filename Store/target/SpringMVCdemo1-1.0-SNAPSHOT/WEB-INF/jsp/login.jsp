@@ -13,7 +13,7 @@
 
 <c:if test="${param.error != null}">
     <div class="alert alert-danger"> 
-        Da co loi xay ra! Vui long quay lai sau!
+        <p>Da co loi xay ra! Vui long quay lai sau!</p>
     </div>
 </c:if>
 
@@ -23,7 +23,7 @@
         <input type="text" id="username" name = "username" class="form-control"/> 
     </div>
     <div class="form-group"> 
-        <label for="username">Password</label>
+        <label for="password">Password</label>
         <input type="password" id="password" name = "password"" class="form-control"/> 
     </div>
     <div class="form-group">

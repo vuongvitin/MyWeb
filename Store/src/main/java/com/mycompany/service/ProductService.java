@@ -16,4 +16,5 @@ public interface ProductService {
     List<Product> getProducts(String kw, int page);
     long countProduct();
     boolean addOrUpdate(Product product);
+    Product getProductById(int id);
 }

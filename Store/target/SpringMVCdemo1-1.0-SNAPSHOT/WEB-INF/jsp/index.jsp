@@ -10,6 +10,8 @@
 <!DOCTYPE html>
 <h1 class="text-center text-danger">Cac san pham</h1>
 
+
+
 <form action="">
     <div class="row">
         <div class="col-md-11">
@@ -45,7 +47,7 @@
                 <p>${p.price} VND</p>
             </div>
             <div>
-                <a href="#" class="btn btn-danger">Dat hang</a>
+                <a href="javascript:;" class="btn btn-danger" onclick="addToCart(${p.id})">Them vao gio</a>
                 <a href="#" class="btn btn-info">Mua ngay</a>
             </div>
         </div>

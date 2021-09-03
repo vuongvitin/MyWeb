@@ -8,8 +8,6 @@ package com.mycompany.configs;
 
 
 import com.mycompany.formatter.CategoryFormatter;
-import com.cloudinary.Cloudinary;
-import com.cloudinary.utils.ObjectUtils;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -53,6 +51,8 @@ public class WebApplicationContextConfig implements WebMvcConfigurer{
                 .addResourceLocations("/resources/css/");
         registry.addResourceHandler("/images/**")
                 .addResourceLocations("/resources/images/");
+        registry.addResourceHandler("/js/**")
+                .addResourceLocations("/resources/js/");
     }
     
     

@@ -61,7 +61,7 @@ public class ProductRepositoryImpl implements ProductRepository{
             session.save(prdct);
             return true;
         }catch (Exception ex){
-            System.err.println("== ADD PRODUCT ERRPR"+ ex.getMessage());
+            System.err.println("== ADD PRODUCT ERRPR ==="+ ex.getMessage());
             ex.printStackTrace();
         }
         
@@ -77,9 +77,9 @@ public class ProductRepositoryImpl implements ProductRepository{
         return Long.parseLong(q.getSingleResult().toString());
     }
 
-//    @Override
-//    public Product getProductById(int productId) {
-//        return this.productRepository.getProductById(productId);
-//    }
-//    
+    @Override
+    public Product getProductById(int id) {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        return session.get(Product.class, id);
+    }
 }

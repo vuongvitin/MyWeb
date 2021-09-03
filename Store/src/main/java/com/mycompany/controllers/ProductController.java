@@ -46,7 +46,7 @@ public class ProductController {
     @PostMapping("/admin/products")
     public String add(Model model, @ModelAttribute(value = "product") @Valid Product product,
             BindingResult result) {
-        
+       
         
         
         if (!result.hasErrors()) {
