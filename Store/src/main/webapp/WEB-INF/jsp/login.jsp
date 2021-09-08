@@ -17,6 +17,12 @@
     </div>
 </c:if>
 
+<c:if test="${param.accessDenied != null}">
+    <div class="alert alert-danger"> 
+        Bạn khong co quyen truy cap!
+    </div>
+</c:if>
+
 <form method="post" action="${action}">
     <div class="form-group"> 
         <label for="username">Username</label>

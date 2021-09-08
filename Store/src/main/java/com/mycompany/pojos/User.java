@@ -12,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,8 +22,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="user")
 public class User implements Serializable{
-    private static final String ADMIN = "ROLE_ADMIN";
-    private static final String USER = "ROLE_USER";
+    public static final String ADMIN = "ROLE_ADMIN";
+    public static final String USER = "ROLE_USER";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,7 +40,8 @@ public class User implements Serializable{
     private boolean active;
     @Column(name = "user_role")
     private String userRole;
-
+    @Transient
+    private String confirmPassword;
     /**
      * @return the id
      */
@@ -165,5 +167,19 @@ public class User implements Serializable{
     public void setUserRole(String userRole) {
         this.userRole = userRole;
     }
-    
+
+    /**
+     * @return the confirmPassword
+     */
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    /**
+     * @param confirmPassword the confirmPassword to set
+     */
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
 }

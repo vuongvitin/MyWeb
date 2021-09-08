@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -26,6 +27,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductRepository productRepository;
     @Autowired
     private Cloudinary cloudinary;
+    
+    
 
     @Override
     public List<Product> getProducts(String kw, int page) {
